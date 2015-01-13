@@ -1,4 +1,3 @@
-<script>
 function Library () {
 	this.shelves = [];
 	this.addShelf = function(shelf) {
@@ -67,4 +66,3 @@ console.log(randomBook());
 console.log(randomBook());
 console.log(randomBook());
 
-</script>
