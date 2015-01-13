@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>
+</title>
+</head>
+	<body>
+		<ul id="Correct Page">
+				<img src= "http://solarsystem.nasa.gov/images/Jupiter.jpg" /
+		</ul>
+	</body>
+<script>
+	var name,
+		 answer,
+		 answer2,
+		 answer3,
+		 answer4,
+		 answer5;
+
+	name = prompt("Enter your name to get started...")
+	alert("Hello" + " " + name + "!," + " " + "I'm a planet, can you guess who I am?" + " " + "Hit OK to get started");
+
+	answer = prompt("I weigh over 300 times more than the Earth...");
+	if (answer !== "Jupiter") {
+		answer2 = prompt("Hint: I have no rings...");
+		  
+		if (answer2 !== "Jupiter") {
+			answer3 = prompt("Hint: I am a gas giant...");
+					
+			if (answer3 !== "Jupiter") {
+				answer4 = prompt("Last hint: I am not a failed car company...");
+				
+				if (answer4 !== "Jupiter") {
+								answer5 = prompt("Keep guessing, you can only fail 4 more times if you know all the planets...");
+									
+					if (answer5 !== "Jupiter") { 
+							while (answer5 !== "Jupiter") {
+							answer5 = prompt("Keep trying until you get it");		
+							}
+
+						}
+					}
+				}
+
+			}
+		};
+</script>
+</html>
