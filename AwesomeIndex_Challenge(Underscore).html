@@ -1,0 +1,57 @@
+<html>
+<head>
+	<title>
+	</title>
+	 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	 <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.3/underscore-min.js"></script>
+</head>
+<body>
+	<p id="awesome-index">The average awesome index is: </p>
+
+<script>
+
+var array1 = [ 
+	{ 
+	name: 'Bob', 
+	occupation: 'programmer', 
+	awesomeIndex: 7, 
+	}, 
+	{ 
+	name: 'Alice', 
+	occupation: 'programmer', 
+	awesomeIndex: 90, 
+	}, 
+	{ 
+	name: 'Zaphod', 
+	occupation: 'President of the Galaxy',
+	},
+	{
+	name: 'Brandon',
+	occupation: 'programmer',
+	awesomeIndex: 250,
+	}
+	];
+
+var count = 0;
+
+_.each(array1, function(item) {
+	if (item.occupation == 'programmer'){
+		count += 1;
+	}
+	if (!_.has(item, 'awesomeIndex') || item.occupation !=='programmer') {
+		item.awesomeIndex = 0;
+	} 
+});
+
+var sum = _.reduce(array1, function(memo, object) {
+	return memo + object.awesomeIndex;
+}, 0);
+
+var average = sum / count;
+console.log(count);
+
+document.getElementById("awesome-index").innerHTML = "New Average Awesome Index = " + average;
+
+</script>
+</body>
+</html>
