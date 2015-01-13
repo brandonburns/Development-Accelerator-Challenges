@@ -43,9 +43,6 @@ var print = function() {
 
 	report(newStore);
 	donutsNeeded(newStore);
-
-	//document.getElementById("dailyReport").innerHTML = "Total Donuts Needed For Day: " + answer1; 
-	//document.getElementById("hourlyReport").innerHTML = "Hourly Donuts Needed: "; 
 };
 
 button1.addEventListener('click', print);
