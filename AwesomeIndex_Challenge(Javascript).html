@@ -1,0 +1,52 @@
+<html>
+<head>
+	<title>
+	</title>
+</head>
+<body>
+	<p id="awesome-index">The average awesome index is: </p>
+
+<script>
+var array1 = [ 
+{ 
+name: 'Bob', 
+occupation: 'programmer', 
+awesomeIndex: 7, 
+}, 
+{ 
+name: 'Alice', 
+occupation: 'programmer', 
+awesomeIndex: 9, 
+}, 
+{ 
+name: 'Zaphod', 
+occupation: 'President of the Galaxy',
+},
+{
+name: 'Brandon',
+occupation: 'programmer',
+awesomeIndex: 200,
+}
+];
+
+
+var awesome = function(array) {
+	var sum = 0,
+			count = 0,
+			average;
+	for (var i = 0; i < array1.length; i++) {
+		if (array1[i].occupation == 'programmer') {
+			count += 1;
+			sum += array[i].awesomeIndex;
+		}
+	}
+	average = sum / count;
+	return average;
+};
+
+document.getElementById("awesome-index").innerHTML = "New Average Awesome Index = " + awesome(array1);
+
+</script>
+</body>
+</html>
+
